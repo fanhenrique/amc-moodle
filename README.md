@@ -78,7 +78,7 @@ Para testar o AMC use o comando:
 auto-multiple-choice
 ```
 
-## Caso alguma etapa falhe use o comando, inicie o processo a partir do passo 4
+## Caso alguma etapa falhe use o comando, e inicie o processo a partir do passo 4
 ```
 vagrant destroy
 ```
