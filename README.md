@@ -68,7 +68,16 @@ Recomenda-se utilizar a mesma senha e endereço de e-mail
 ![admin1](https://github.com/fanhenrique/tccAMCMoodle/blob/master/prints/admin1.png)
 ![admin2](https://github.com/fanhenrique/tccAMCMoodle/blob/master/prints/admin2.png)
 
-### 12. Configure um nome para a página, localização, 
+### 12. Configure um nome para a página, localização(America/Sao_paulo) e a configuração de e-mail de saída. Salve as mudanças
 ![settings1](https://github.com/fanhenrique/tccAMCMoodle/blob/master/prints/settings1.png) 
+![settings2](https://github.com/fanhenrique/tccAMCMoodle/blob/master/prints/settings2.png)
+
+# *Moodle* e o *Auto Multiple Choice* estão prontos para usar
+Para testar o AMC use o comando:
+```
+auto-multiple-choce
+```
+
+
 
 
