@@ -1,4 +1,4 @@
-# tccProjetoAMC
+# tccAMCMoodle
 
 1. O primeiro passo é instalar as dependências.
 
@@ -39,8 +39,16 @@ cd tccAMCMoodle
 vagrant up
 ```
 
-5. Para acessar a máquina.
+5. Para acessar a máquina virtual.
 ```
 vagrant ssh
 ```
- 
+
+6. Abra no navegador Firefox que já está instalado na máquina.
+```
+firefox
+```
+
+7. Acesse localhot/moodle no navegador.
+
+
