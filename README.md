@@ -67,5 +67,8 @@ firefox
 Recomenda-se utilizar a mesma senha e endereço de e-mail
 ![admin1](https://github.com/fanhenrique/tccAMCMoodle/blob/master/prints/admin1.png)
 ![admin2](https://github.com/fanhenrique/tccAMCMoodle/blob/master/prints/admin2.png)
-![admin3](https://github.com/fanhenrique/tccAMCMoodle/blob/master/prints/admin3.png)
+
+### 12. Configure um nome para a página, localização, 
+![settings1](https://github.com/fanhenrique/tccAMCMoodle/blob/master/prints/settings1.png) 
+
 
