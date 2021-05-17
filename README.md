@@ -63,7 +63,7 @@ firefox
 ![installation1](https://github.com/fanhenrique/tccAMCMoodle/blob/master/prints/installation1.png)
 ![installation2](https://github.com/fanhenrique/tccAMCMoodle/blob/master/prints/installation2.png)
 
-### 11. Criar uma conte de adiministrador (altere apenas os campos *New password* e *e-mail address*), em seguida clique em *Update Profile*
+### 11. Criar uma conta de administrador (altere apenas os campos *New password* e *e-mail address*), em seguida clique em *Update Profile*
 Recomenda-se utilizar a mesma senha e endereço de e-mail
 ![admin1](https://github.com/fanhenrique/tccAMCMoodle/blob/master/prints/admin1.png)
 ![admin2](https://github.com/fanhenrique/tccAMCMoodle/blob/master/prints/admin2.png)
