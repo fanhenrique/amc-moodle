@@ -53,6 +53,6 @@ firefox
 ### 7. Acesse *localhost/moodle*
 
 ### 8. Confirme os direitos autorais
-
+![](/prints/copyright.png)
 
 
