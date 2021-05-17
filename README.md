@@ -72,7 +72,7 @@ Recomenda-se utilizar a mesma senha e endereço de e-mail
 ![settings1](https://github.com/fanhenrique/tccAMCMoodle/blob/master/prints/settings1.png) 
 ![settings2](https://github.com/fanhenrique/tccAMCMoodle/blob/master/prints/settings2.png)
 
-# *Moodle* e o *Auto Multiple Choice* estão prontos para usar
+# *Moodle* e o *Auto Multiple Choice* estão prontos para serem usados
 Para testar o AMC use o comando:
 ```
 auto-multiple-choice
