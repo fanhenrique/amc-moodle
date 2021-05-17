@@ -75,7 +75,7 @@ Recomenda-se utilizar a mesma senha e endereço de e-mail
 # *Moodle* e o *Auto Multiple Choice* estão prontos para usar
 Para testar o AMC use o comando:
 ```
-auto-multiple-choce
+auto-multiple-choice
 ```
 
 
