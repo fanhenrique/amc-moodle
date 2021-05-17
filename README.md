@@ -49,6 +49,6 @@ vagrant ssh
 firefox
 ```
 
-7. Acesse localhost/moodle no navegador.
+7. Acesse *localhost/moodle* no navegador.
 
 
