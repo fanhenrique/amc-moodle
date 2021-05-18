@@ -19,8 +19,23 @@ function amc {
         $update
         updated="true"
     fi
-	$install auto-multiple-choice
+    
+    $install auto-multiple-choice
     echo 'Installed AMC'
+}
+
+function amc_code {
+    if [[ updated != true ]]; then
+        $update
+        updated="true"
+    fi
+    
+    $install mercurial
+    $install libnetpbm10-dev libcv-dev libhighgui-dev dblatex docbook-xsl librsvg2-bin libxml-libxml-perl g++ libgtk2-notify-perl netpbm libopencv-dev libpoppler-glib-dev texlive-lang-french 
+    hg clone https://bitbucket.org/auto-multiple-choice/auto-multiple-choice
+    cd auto-multiple-choice
+    make deb
+    echo 'Installed AMC source'
 }
 
 function dependencies {
@@ -98,6 +113,7 @@ function usage {
 
     printf 'options:\n' >&2
     printf -- ' -a: install AMC\n' >&2
+    printf -- ' -c: install AMC source code\n' >&2
     printf -- ' -d: install dependencies' >&2
     printf -- ' -m: install Moodle\n' >&2
     printf -- ' -s: install mySQL\n' >&2
@@ -112,6 +128,7 @@ else
     do
         case $OPTION in
         a)    amc;;
+	c)    amc_code;;
         d)    dependencies;;
         m)    moodle;;
         s)    mysql;;
