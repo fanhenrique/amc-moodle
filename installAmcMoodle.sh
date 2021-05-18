@@ -30,11 +30,8 @@ function amc_code {
         updated="true"
     fi
     
-    $install mercurial
-    $install libnetpbm10-dev libcv-dev libhighgui-dev dblatex docbook-xsl librsvg2-bin libxml-libxml-perl g++ libgtk2-notify-perl netpbm libopencv-dev libpoppler-glib-dev texlive-lang-french 
-    hg clone https://bitbucket.org/auto-multiple-choice/auto-multiple-choice
-    cd auto-multiple-choice
-    make deb
+    git clone https://gitlab.com/jojo_boulix/auto-multiple-choice.git
+
     echo 'Installed AMC source'
 }
 
@@ -129,7 +126,7 @@ else
     do
         case $OPTION in
         a)    amc;;
-	c)    amc_code;;
+        c)    amc_code;;
         d)    dependencies;;
         m)    moodle;;
         s)    mysql;;
