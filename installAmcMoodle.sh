@@ -46,6 +46,7 @@ function dependencies {
 
     $install git
     $install php
+    $install evince
 
     #Install Browser
     $install firefox
