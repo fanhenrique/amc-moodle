@@ -112,7 +112,7 @@ function usage {
     printf 'options:\n' >&2
     printf -- ' -a: install AMC\n' >&2
     printf -- ' -c: install AMC source code\n' >&2
-    printf -- ' -d: install dependencies' >&2
+    printf -- ' -d: install dependencies\n' >&2
     printf -- ' -m: install Moodle\n' >&2
     printf -- ' -s: install mySQL\n' >&2
     
@@ -122,7 +122,7 @@ function usage {
 if [[ $# -eq 0 ]]; then
     usage
 else
-    while getopts 'dams' OPTION
+    while getopts 'acdms' OPTION
     do
         case $OPTION in
         a)    amc;;
