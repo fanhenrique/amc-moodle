@@ -1,0 +1,3 @@
+[submodule "auto-multiple-choice"]
+	path = auto-multiple-choice
+	url = https://gitlab.com/jojo_boulix/auto-multiple-choice.git
