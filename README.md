@@ -39,7 +39,7 @@ git clone https://github.com/fanhenrique/tccAMCMoodle.git
 cd tccAMCMoodle
 ```
 
-### 4. Inicie a instalação da máquina virtual
+### 4. Inicie a instalação da máquina virtual (esse passo pode demorar alguns minutos)
 ```
 vagrant up
 ```
