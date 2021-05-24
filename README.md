@@ -6,6 +6,10 @@ Atualizar os repositórios:
 ```
 sudo apt-get update
 ```
+Instalar gerenciador de janelas:
+```
+sudo apt-get install -y xorg openbox
+```
 
 Instalar o VirtualBox:
 ```
