@@ -8,7 +8,7 @@ sudo apt-get update
 ```
 Instalar gerenciador de janelas:
 ```
-sudo apt-get install -y xorg openbox
+sudo apt-get install -y xorg
 ```
 
 Instalar o VirtualBox:
