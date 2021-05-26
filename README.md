@@ -6,7 +6,7 @@ Atualizar os repositórios:
 ```
 sudo apt-get update
 ```
-Instalar gerenciador de janelas:
+Instalar o gerenciador de janelas:
 ```
 sudo apt-get install -y xorg
 ```
