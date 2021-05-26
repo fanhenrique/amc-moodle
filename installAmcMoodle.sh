@@ -38,6 +38,8 @@ function amc_code {
 
     $install liblocale-gettext-perl libxml-simple-perl libxml-writer-perl libgtk3-perl libio-compress-perl libcompress-zlib-perl libgraphics-magick-perl libdbd-sqlite3-perl libdbi-perl libfile-mimeinfo-perl libtext-csv-perl texlive-latex-base texlive-latex-recommended texlive-plain-generic texlive-latex-extra texlive-fonts-extra imagemagick netpbm ghostscript poppler-utils libarchive-zip-perl librsvg2-common unzip libglib-object-introspection-perl libclone-perl liblocale-codes-perl
 
+    $install libgetopt-argparse-perl
+
     make version_files
     make
 
