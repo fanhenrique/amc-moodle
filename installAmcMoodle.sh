@@ -42,7 +42,6 @@ function amc_code {
     git clone https://gitlab.com/jojo_boulix/auto-multiple-choice.git
     cd auto-multiple-choice
 
-
     #compile AMC
     make version_files
     make
