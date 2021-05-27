@@ -29,17 +29,21 @@ function amc_code {
         $update
         updated="true"
     fi
+
+    #dependências AMC
+    $install debhelper gettext libnetpbm10-dev libxml-libxml-perl dblatex xsltproc docbook-xml docbook-xsl librsvg2-bin netpbm texlive-pictures pkg-config libopencv-dev libpoppler-glib-dev libcairo2-dev libpango1.0-dev texlive-latex-recommended texlive-xetex lmodern texlive-lang-french texlive-lang-japanese texlive-lang-chinese libxml-writer-perl libxml-perl
+    $install liblocale-gettext-perl libxml-simple-perl libxml-writer-perl libgtk3-perl libio-compress-perl libcompress-zlib-perl libgraphics-magick-perl libdbd-sqlite3-perl libdbi-perl libfile-mimeinfo-perl libtext-csv-perl texlive-latex-base texlive-latex-recommended texlive-plain-generic texlive-latex-extra texlive-fonts-extra imagemagick netpbm ghostscript poppler-utils libarchive-zip-perl librsvg2-common unzip libglib-object-introspection-perl libclone-perl liblocale-codes-perl
+
+    #Argparse perl
+    $install libgetopt-argparse-perl
     
+    #clone AMC
     cd ..
     git clone https://gitlab.com/jojo_boulix/auto-multiple-choice.git
     cd auto-multiple-choice
 
-    $install debhelper gettext libnetpbm10-dev libxml-libxml-perl dblatex xsltproc docbook-xml docbook-xsl librsvg2-bin netpbm texlive-pictures pkg-config libopencv-dev libpoppler-glib-dev libcairo2-dev libpango1.0-dev texlive-latex-recommended texlive-xetex lmodern texlive-lang-french texlive-lang-japanese texlive-lang-chinese libxml-writer-perl libxml-perl
 
-    $install liblocale-gettext-perl libxml-simple-perl libxml-writer-perl libgtk3-perl libio-compress-perl libcompress-zlib-perl libgraphics-magick-perl libdbd-sqlite3-perl libdbi-perl libfile-mimeinfo-perl libtext-csv-perl texlive-latex-base texlive-latex-recommended texlive-plain-generic texlive-latex-extra texlive-fonts-extra imagemagick netpbm ghostscript poppler-utils libarchive-zip-perl librsvg2-common unzip libglib-object-introspection-perl libclone-perl liblocale-codes-perl
-
-    $install libgetopt-argparse-perl
-
+    #compile AMC
     make version_files
     make
 
