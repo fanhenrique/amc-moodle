@@ -1,0 +1,73 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8x]{inputenc}    
+\usepackage[T1]{fontenc}
+
+\usepackage[box,completemulti]{automultiplechoice}    
+\begin{document}
+
+\onecopy{10}{    
+
+%%% beginning of the test sheet header:    
+
+\noindent{\bf QCM  \hfill TEST}
+
+\vspace*{.5cm}
+\begin{minipage}{.4\linewidth}
+\centering\large\bf Test\\ Examination on Jan., 1st, 2008\end{minipage}
+\namefield{\fbox{    
+                \begin{minipage}{.5\linewidth}
+                  Firstname and lastname:
+
+                  \vspace*{.5cm}\namefielddots   
+                  \vspace*{1mm}
+                \end{minipage}
+         }}
+
+\begin{center}\em
+Duration : 10 minutes.
+
+  No documents allowed. The use of electronic calculators is forbidden.
+
+
+  Questions using the sign \multiSymbole{} may have
+  zero, one or several correct answers.  Other questions have a single correct answer.
+
+  Negative points may be attributed to \emph{very
+    bad} answers.
+\end{center}
+\vspace{1ex}
+
+%%% end of the header
+
+\begin{question}{prez}    
+  QUESTÃO 37 - Dado um grafo G e um vértice de origem, qual é o algoritmo de busca que descobre
+todos os vértices a uma distância K do vértice origem, antes de descobrir qualquer vértice a uma
+distância K+1?
+  \begin{choices}
+    \wrongchoice{Pré-ordem}
+    \correctchoice{Largura}
+    \wrongchoice{Pós-ordem}
+    \wrongchoice{Profundidade}
+    \wrongchoice{Simétrica}
+  \end{choices}
+\end{question}
+
+\begin{questionmult}{pref}    
+  QUESTÃO 38 – O programa deve ser feito de forma descendente, com a decomposição do problema
+inicial em módulos, de modo a dividir as ações complexas em uma sequência de ações mais simples.
+Essa técnica de programação é chamada de programação:
+  \begin{choices}
+    \wrongchoice{Abstrata}
+    \wrongchoice{Interna}
+    \wrongchoice{Declarativa}
+    \wrongchoice{Sequencial}
+    \correctchoice{Modular}
+  \end{choices}
+\end{questionmult}
+
+% \AMCaddpagesto{3} 
+
+}   
+
+\end{document}
