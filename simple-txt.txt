@@ -1,0 +1,23 @@
+# AMC-TXT source file
+Title: POSCOMP-2019
+
+Presentation: Please answer the following questions
+the best you can.
+
+* QUESTÃO 37 - Dado um grafo G e um vértice de origem, qual é o algoritmo de busca que descobre
+todos os vértices a uma distância K do vértice origem, antes de descobrir qualquer vértice a uma
+distância K+1?
+- Pré-ordem
++ Largura
+- Pós-ordem
+- Profundidade
+- Simétrica 
+
+* QUESTÃO 38 – O programa deve ser feito de forma descendente, com a decomposição do problema
+inicial em módulos, de modo a dividir as ações complexas em uma sequência de ações mais simples.
+Essa técnica de programação é chamada de programação:
+- Abstrata
+- Interna
+- Declarativa
+- Sequencial
++ Modular
