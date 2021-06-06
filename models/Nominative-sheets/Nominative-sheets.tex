@@ -42,7 +42,7 @@ Duration : 10 minutes.
 \AMCassociation{\id}
 
 %\AMCaddpagesto{3}
-    }%onecopy
+	  }%onecopy
 }%test
 
 %%%%§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
@@ -60,30 +60,39 @@ Duration : 10 minutes.
 
 \element{general}{
   \begin{question}{prez}    
-  QUESTÃO 37 - Dado um grafo G e um vértice de origem, qual é o algoritmo de busca que descobre todos os vértices a uma distância K do vértice origem, antes de descobrir qualquer vértice a uma distância K+1?
+    Among the following persons, which one has ever been a President of the French Republic?
     \begin{choices}
-      \wrongchoice{Pré-ordem}
-      \correctchoice{Largura}
-      \wrongchoice{Pós-ordem}
-      \wrongchoice{Profundidade}
-      \wrongchoice{Simétrica}
+      \correctchoice{René Coty}
+      \wrongchoice{Alain Prost}
+      \wrongchoice{Marcel Proust}
+      \wrongchoice{Claude Monet}
     \end{choices}
   \end{question}
 }
 
 \element{general}{
-  \begin{question}{pref}    
-  QUESTÃO 38 – O programa deve ser feito de forma descendente, com a decomposição do problema inicial em módulos, de modo a dividir as ações complexas em uma sequência de ações mais simples. Essa técnica de programação é chamada de programação:
-  \begin{choices}
-    \wrongchoice{Abstrata}
-    \wrongchoice{Interna}
-    \wrongchoice{Declarativa}
-    \wrongchoice{Sequencial}
-    \correctchoice{Modular}
-  \end{choices}
-\end{question}
+  \begin{questionmult}{pref}    
+    Among the following cities, which ones are French prefectures?
+    \begin{choices}
+      \correctchoice{Poitiers}
+      \wrongchoice{Sainte-Menehould}
+      \correctchoice{Avignon}
+    \end{choices}
+  \end{questionmult}
 }
 
+\element{general}{
+  \begin{question}{nb-ue}
+    How many different states were members of the European Union in Jan. 2009?
+    \begin{choiceshoriz}[o]
+      \wrongchoice{15}
+      \wrongchoice{21}
+      \wrongchoice{25}
+      \correctchoice{27}
+      \wrongchoice{31}
+    \end{choiceshoriz}
+  \end{question}
+}
 %%% end of groups
 
 \csvreader[head to column names]{list.csv}{}{\Test}
