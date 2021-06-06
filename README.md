@@ -21,6 +21,11 @@ Instalar o Git:
 sudo apt-get install -y git
 ```
 
+Instalar o Curl:
+```
+sudo apt-get install -y curl
+```
+
 Instalar o Vagrant:
 ```
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
