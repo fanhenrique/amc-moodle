@@ -36,7 +36,7 @@ def main():
 		logging.basicConfig(format='%(asctime)s.%(msecs)03d %(message)s', datefmt=TIME_FORMAT, level=args.log)
 
 
-	path = '/home/fanhenrique/MC-Projects/' + args.project
+	path = '/home/vagrant/MC-Projects/' + args.project
 
 	os.makedirs(path)
 	os.makedirs(path+'/cr')
@@ -49,7 +49,7 @@ def main():
 	os.makedirs(path+'/scans')
 	os.makedirs(path+'/exports')
 
-	os.system('tar -xvzf models/Nominative-sheets.tgz -C ' + path)
+	os.system('tar -xvzf /home/vagrant/amc-testbed/models/Nominative-sheets.tgz -C ' + path)
 
 	if(args.file != DEFAULT_FILE):
 		shutil.copy2(os.getcwd() + '/' + args.file, path)
