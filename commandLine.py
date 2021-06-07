@@ -9,6 +9,10 @@ import shutil
 import argparse
 import logging
 
+DEFAULT_NCOPIES = 1
+DEFAULT_STUDENTS = 'list.csv'
+DEFAULT_FILE = '/Nominative-sheets.tex'
+
 DEFAULT_LOG_LEVEL = logging.INFO
 TIME_FORMAT = '%Y-%m-%d,%H:%M:%S'
 
@@ -17,9 +21,9 @@ def main():
 	parser = argparse.ArgumentParser(description='Command Line AMC')
 
 	parser.add_argument('--project', '-p', help='Diretorio do projeto', required=True, type=str)
-	parser.add_argument('--file', '-f', help='Arquivo para criar as provas', type=str)
-	parser.add_argument('--students', '-s', help='lista dos alunos', type=str)
-	parser.add_argument('--tests', '-t', help='Quantidade de provas', type=int)
+	parser.add_argument('--file', '-f', help='Arquivo latex para criar as provas', default=DEFAULT_FILE, type=str)
+	parser.add_argument('--students', '-s', help='lista dos alunos', default=DEFAULT_STUDENTS, type=str)
+	parser.add_argument('--ncopies', '-n', help='Quantidade de provas', default=DEFAULT_NCOPIES, type=int)
 	
 	help_msg = "Logging level (INFO=%d DEBUG=%d)" % (logging.INFO, logging.DEBUG)
 	parser.add_argument("--log", "-l", help=help_msg, default=DEFAULT_LOG_LEVEL, type=int)
@@ -45,34 +49,31 @@ def main():
 	os.makedirs(path+'/scans')
 	os.makedirs(path+'/exports')
 
-
 	os.system('tar -xvzf models/Nominative-sheets.tgz -C ' + path)
 
-
-	if(args.file):
+	if(args.file != DEFAULT_FILE):
 		shutil.copy2(os.getcwd() + '/' + args.file, path)
-		file = path + '/' + args.file 
-	else:
-		file = path + '/Nominative-sheets.tex'
+	
+	file = path + '/' + args.file
+	
 	print(file)
-
 
 	os.system('auto-multiple-choice prepare '+
                '--with pdflatex '+
                '--filter latex '+
-               '--filtered-source '+path+'/DOC-filtered.tex '+
-               '--out-sujet '+path+'/DOC-sujet.pdf '+
-               '--out-corrige '+path+'/DOC-corrige.pdf '+
-               '--out-corrige-indiv '+path+'/DOC-indiv-solution.pdf '+
-               '--out-catalog '+path+'/DOC-catalog.pdf '+	
-               '--out-calage '+path+'/DOC-calage.xy '+
+               '--filtered-source ' + path + '/DOC-filtered.tex '+
+               '--out-sujet ' + path + '/DOC-sujet.pdf '+
+               '--out-corrige ' + path + '/DOC-corrige.pdf '+
+               '--out-corrige-indiv ' + path + '/DOC-indiv-solution.pdf '+
+               '--out-catalog ' + path + '/DOC-catalog.pdf '+	
+               '--out-calage ' + path + '/DOC-calage.xy '+
                '--mode s[sc]k '+
-               '--n-copies 1 '+
+               '--n-copies '+ str(args.ncopies) +' '+
                file + ' '+
-               '--prefix '+path+' '+
+               '--prefix ' + path + ' '+
                '--latex-stdout '+
-               '--data '+path+'/data '+  
-	           '--debug '+path+'/file.log')
+               '--data ' + path + '/data '+  
+	           '--debug ' + path + '/file.log')
 
 
 if __name__ == '__main__':
