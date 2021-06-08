@@ -24,6 +24,7 @@ function amc {
     echo 'Installed AMC'
 }
 
+############ NÃO ESTÁ SENDO USADO ############
 function amc_code {
     if [[ updated != true ]]; then
         $update
@@ -58,6 +59,8 @@ function dependencies {
     $install git
     $install php
     $install evince
+    $install python3-pip
+    pip3 install mysql-connector-python
 
     #Install Browser
     $install firefox
