@@ -20,8 +20,9 @@ def main():
 
 	parser = argparse.ArgumentParser(description='Command Line AMC')
 
-	parser.add_argument('--project', '-p', help='Diretorio do projeto', required=True, type=str)
+	parser.add_argument('--project', '-p', help='Diretório do projeto', required=True, type=str)
 	parser.add_argument('--file', '-f', help='Arquivo latex para criar as provas', default=DEFAULT_FILE, type=str)
+	parser.add_argument('--course', '-c', help='Curso', required=True, type=str)
 	parser.add_argument('--students', '-s', help='lista dos alunos', default=DEFAULT_STUDENTS, type=str)
 	parser.add_argument('--ncopies', '-n', help='Quantidade de provas', default=DEFAULT_NCOPIES, type=int)
 	
@@ -35,8 +36,8 @@ def main():
 	else:
 		logging.basicConfig(format='%(asctime)s.%(msecs)03d %(message)s', datefmt=TIME_FORMAT, level=args.log)
 
-
 	path = '/home/vagrant/MC-Projects/' + args.project
+	logging.info('Created project directory')
 
 	os.makedirs(path)
 	os.makedirs(path+'/cr')
@@ -48,15 +49,24 @@ def main():
 	os.makedirs(path+'/data')
 	os.makedirs(path+'/scans')
 	os.makedirs(path+'/exports')
-
+	
+	# Descompacta modelos  
 	os.system('tar -xvzf /home/vagrant/amc-testbed/models/Nominative-sheets.tgz -C ' + path)
+	logging.info('Unzipped model')
+
+	# Busca alunos no banco de dados
+	logging('')
+	cmd = 'python3 queryStudents.py -c \'' + args.course + '\' -p' + path
+	logging.info('Command: ' + cmd)
+	os.system(cmd)
 
 	if(args.file != DEFAULT_FILE):
 		shutil.copy2(os.getcwd() + '/' + args.file, path)
-	
 	file = path + '/' + args.file
+	logging.info('Copied ' + args.file + 'to project')
 	
-	print(file)
+
+
 
 	os.system('auto-multiple-choice prepare '+
                '--with pdflatex '+
@@ -74,6 +84,9 @@ def main():
                '--latex-stdout '+
                '--data ' + path + '/data '+  
 	           '--debug ' + path + '/file.log')
+
+
+
 
 
 if __name__ == '__main__':
