@@ -43,18 +43,18 @@ def main():
 	SELECT mdl_user_enrolments.enrolid, 
 	mdl_user_enrolments.userid, 
 	mdl_enrol.courseid, 
-	mdl_course.shortname,
-	mdl_user.username,
-	mdl_user.firstname,
+	mdl_course.shortname, 
+	mdl_user.username, 
+	mdl_user.firstname, 
 	mdl_user.lastname, 
-	mdl_user.email
-	FROM mdl_user_enrolments,
-	mdl_enrol,
-	mdl_course,
-	mdl_user
-	WHERE mdl_enrol.id=mdl_user_enrolments.enrolid AND
-	mdl_user_enrolments.userid=mdl_user.id AND
-	mdl_enrol.courseid=mdl_course.id AND
+	mdl_user.email 
+	FROM mdl_user_enrolments, 
+	mdl_enrol, 
+	mdl_course, 
+	mdl_user 
+	WHERE mdl_enrol.id=mdl_user_enrolments.enrolid AND 
+	mdl_user_enrolments.userid=mdl_user.id AND 
+	mdl_enrol.courseid=mdl_course.id AND 
 	mdl_course.shortname=\''''+args.course+'''\';
 	'''
 	cursor.execute(cmd)
