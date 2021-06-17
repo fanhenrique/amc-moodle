@@ -181,6 +181,65 @@ def main():
 		os.system(note)
 		           
 
+		association = ('auto-multiple-choice association-auto '+
+				'--data ' + pathProject + '/data '+
+				'--notes-id id '+
+				'--liste ' + pathProject + '/list.csv '+
+		 		'--liste-key id '+
+		 		# '--csv-build-name name forename '+
+		 		'--csv-build-name name forename '+
+		 		'--encodage-liste UTF-8 '+		
+		 		'--debug ' + pathProject + '/file.log '+
+		       	'--pre-association')
+
+		os.system(association)
+
+
+		export_csv = ('auto-multiple-choice export '+
+				'--debug ' + pathProject + '/file.log '+
+				'--module CSV '+
+				'--data ' + pathProject + '/data '+
+				'--useall '+
+				'--sort n '+
+				'--fich-noms ' + pathProject + '/list.csv '+
+				'--noms-encodage UTF-8 '+
+				'--csv-build-name (nom|surname) (prenom|name) '+
+				'--no-rtl '+
+				'--output ' + pathProject + '/exports/Nominative-sheets.csv '+
+				'--option-out encodage=UTF-8 '+
+				'--option-out columns=student.copy,student.key,student.name '+
+				'--option-out separateur=; '+
+				'--option-out decimal=, '+
+				'--option-out ticked=')
+		
+
+		# auto-multiple-choice export --debug /tmp/AMC-DEBUG-0Mzfd9_R.log --module CSV --data /home/vagrant/MC-Projects/teste/data --useall  --sort n --fich-noms /home/vagrant/MC-Projects/teste/list.csv --noms-encodage UTF-8 --csv-build-name (nom|surname) (prenom|name) --no-rtl --output /home/vagrant/MC-Projects/teste/exports/Nominative-sheets.csv --option-out encodage=UTF-8 --option-out columns=student.copy,student.key,student.name --option-out separateur=; --option-out decimal=, --option-out ticked=
+
+		export_ods = ('auto-multiple-choice export '+
+				'--debug ' + pathProject + '/file.log '+
+				'--module ods '+	
+				'--data ' + pathProject + '/data '+
+				'--useall '+
+				'--sort n '+
+				'--fich-noms ' + pathProject + '/list.csv '+
+				'--noms-encodage UTF-8 '+
+				# '--csv-build-name (nom|surname) (prenom|name) '+
+				'--no-rtl '+
+				'--output ' + pathProject +'/exports/Nominative-sheets.ods '
+				'--option-out groupsep=. '+
+				'--option-out nom= '+
+				'--option-out statsindic= '+
+				'--option-out code=Nominative-sheets '+
+				'--option-out groupsums=0 '+
+				'--option-out columns=student.copy,student.key,student.name '+
+				'--option-out stats=')
+
+
+		os.system(export_ods)
+
+
+		# auto-multiple-choice export --debug /tmp/AMC-DEBUG-Sy0iXzag.log --module ods --data /home/vagrant/MC-Projects/teste/data --useall  --sort n --fich-noms /home/vagrant/MC-Projects/teste/list.csv --noms-encodage UTF-8 --csv-build-name (nom|surname) (prenom|name) --no-rtl --output /home/vagrant/MC-Projects/teste/exports/Nominative-sheets.ods --option-out code=Nominative-sheets --option-out statsindic= --option-out nom= --option-out groupsep=. --option-out columns=student.copy,student.key,student.name --option-out stats= --option-out groupsums=0
+
 
 if __name__ == '__main__':
 	main()
