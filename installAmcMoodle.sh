@@ -58,7 +58,11 @@ function dependencies {
 
     $install git
     $install php
+    
     $install evince
+    $install xournal
+    $install eog
+    
     $install python3-pip
     pip3 install mysql-connector-python
 
@@ -66,7 +70,7 @@ function dependencies {
     $install firefox
     echo 'Installed Firefox'
 
-    # Install Additional Software
+    # Install Additional Software for Moodle 
     $install graphviz aspell ghostscript clamav php7.4-pspell php7.4-curl php7.4-gd php7.4-intl php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-ldap php7.4-zip php7.4-soap php7.4-mbstring
 }
 
