@@ -25,6 +25,7 @@ def main():
 	parser.add_argument('--answers', '-a', help='Arquivos pdf com as respostas para corrigir', type=str)
 	parser.add_argument('--file', '-f', help='Arquivo latex para criar as provas', default=DEFAULT_LATEX, type=str)
 	parser.add_argument('--course', '-c', help='Curso', type=str)
+	parser.add_argument('--quiz', '-q', help='Questionário', type=str)
 	parser.add_argument('--students', '-s', help='lista dos alunos', default=DEFAULT_STUDENTS, type=str)
 	parser.add_argument('--ncopies', '-n', help='Quantidade de provas', default=DEFAULT_NCOPIES, type=int)
 	
