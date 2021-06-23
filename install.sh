@@ -57,12 +57,16 @@ function dependencies {
     fi
 
     $install git
+
+    # Dependency for Moodle
     $install php
     
+    # Dependencies for AMC
     $install evince
     $install xournal
     $install eog
     
+    # Usad to access the Moodle database  
     $install python3-pip
     pip3 install mysql-connector-python
 
