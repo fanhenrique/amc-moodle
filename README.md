@@ -1,4 +1,4 @@
-# tccAMCMoodle
+# conecta o AMC ao Moodle
 
 ### 1. O primeiro passo é instalar as dependências.
 
