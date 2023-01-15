@@ -41,7 +41,7 @@ git clone https://github.com/fanhenrique/amc-moodle.git
 
 ### 3. Entre no diretório do repositório
 ```
-cd tccAMCMoodle
+cd amc-moodle
 ```
 
 ### 4. Inicie a instalação da máquina virtual (esse passo pode demorar alguns minutos)
