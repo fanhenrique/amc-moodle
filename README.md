@@ -36,7 +36,7 @@ sudo apt-get update && sudo apt-get install vagrant
 
 ### 2. Em seguida, clone esse repositório
 ```
-git clone https://github.com/fanhenrique/tccAMCMoodle.git
+git clone https://github.com/fanhenrique/amc-moodle.git
 ```
 
 ### 3. Entre no diretório do repositório
